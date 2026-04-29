@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anfrage — Seeblick Sappl am Millstätter See</title>
+  <meta name="description" content="Senden Sie uns eine unverbindliche Anfrage für Ihren Urlaub in den Ferienwohnungen Seeblick Sappl am Millstätter See.">
+  <link rel="canonical" href="https://seeblick-sappl.at/anfrage/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">Seeblick Sappl</a>
+      <nav class="nav">
+        <a href="wohnungen/index.html" class="nav__link">Wohnungen</a>
+        <a href="haus-und-extras.html" class="nav__link">Haus &amp; Extras</a>
+        <a href="umgebung.html" class="nav__link">Umgebung</a>
+        <a href="preise.html" class="nav__link">Preise</a>
+        <a href="anreise.html" class="nav__link">Anreise</a>
+        <a href="anfrage.html" class="btn btn--primary nav__cta">Jetzt anfragen</a>
+      </nav>
+      <button class="hamburger" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="mobile-nav">
+    <a href="wohnungen/index.html" class="mobile-nav__link">Wohnungen</a>
+    <a href="haus-und-extras.html" class="mobile-nav__link">Haus &amp; Extras</a>
+    <a href="umgebung.html" class="mobile-nav__link">Umgebung</a>
+    <a href="preise.html" class="mobile-nav__link">Preise</a>
+    <a href="anreise.html" class="mobile-nav__link">Anreise</a>
+    <a href="anfrage.html" class="mobile-nav__link">Jetzt anfragen</a>
+  </div>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Anfrage senden</h1>
+      <p>Unverbindlich und kostenfrei — wir antworten innerhalb von 24 Stunden.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <nav class="breadcrumb"><a href="index.html">Startseite</a> <span>/</span> Anfrage</nav>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="form-card">
+        <form id="anfrageForm" action="https://formspree.io/f/mgenrolz" method="POST" novalidate>
+          <!-- Honeypot -->
+          <div style="position:absolute;left:-9999px;" aria-hidden="true">
+            <label for="website">Website</label>
+            <input type="text" name="website" id="website" tabindex="-1" autocomplete="off">
+          </div>
+
+          <h3 style="margin-bottom:16px;">Ihre Wunsch-Wohnung</h3>
+
+          <div class="form-group">
+            <label>Welche Wohnung interessiert Sie?</label>
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" name="wohnung" value="daria"> Daria
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="wohnung" value="leander"> Leander
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="wohnung" value="timon"> Timon
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="wohnung" value="egal"> Egal / alle
+              </label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="anreise">Anreisedatum <span class="required">*</span></label>
+              <input type="date" id="anreise" name="anreise" required>
+            </div>
+            <div class="form-group">
+              <label for="abreise">Abreisedatum <span class="required">*</span></label>
+              <input type="date" id="abreise" name="abreise" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="erwachsene">Anzahl Erwachsene <span class="required">*</span></label>
+              <select id="erwachsene" name="erwachsene" required>
+                <option value="">Bitte wählen</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="kinder">Anzahl Kinder</label>
+              <select id="kinder" name="kinder">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="kinder_alter">Alter der Kinder (falls zutreffend)</label>
+            <input type="text" id="kinder_alter" name="kinder_alter" placeholder="z. B. 3 und 7 Jahre">
+          </div>
+
+          <div class="form-group">
+            <label>Haustier mitbringen?</label>
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="radio" name="haustier" value="ja"> Ja
+              </label>
+              <label class="checkbox-label">
+                <input type="radio" name="haustier" value="nein" checked> Nein
+              </label>
+            </div>
+          </div>
+
+          <hr style="border:none; border-top:1px solid var(--color-border); margin:24px 0;">
+
+          <h3 style="margin-bottom:16px;">Ihre Kontaktdaten</h3>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name <span class="required">*</span></label>
+              <input type="text" id="name" name="name" required placeholder="Vor- und Nachname">
+            </div>
+            <div class="form-group">
+              <label for="email">E-Mail-Adresse <span class="required">*</span></label>
+              <input type="email" id="email" name="email" required placeholder="ihre@email.at">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="telefon">Telefonnummer (optional)</label>
+            <input type="tel" id="telefon" name="telefon" placeholder="+43 ...">
+          </div>
+
+          <div class="form-group">
+            <label for="nachricht">Nachricht / besondere Wünsche</label>
+            <textarea id="nachricht" name="nachricht" placeholder="Gibt es etwas, das wir wissen sollten?"></textarea>
+          </div>
+
+          <div class="form-consent">
+            <input type="checkbox" name="datenschutz" id="datenschutz" required>
+            <label for="datenschutz">Ich habe die <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zum Zweck der Anfragebeantwortung zu. <span class="required">*</span></label>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--lg" style="width:100%;">Anfrage absenden</button>
+
+          <p style="margin-top:12px; font-size:11px; color:var(--color-meta); text-align:center;">
+            Ihre Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und nicht gespeichert.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <h4 class="footer__heading">Seeblick Sappl</h4>
+          <p>Ferienwohnungen mit Panoramablick. Familientradition seit 1948.</p>
+        </div>
+        <div>
+          <h4 class="footer__heading">Navigation</h4>
+          <ul class="footer__list">
+            <li><a href="wohnungen/index.html">Wohnungen</a></li>
+            <li><a href="haus-und-extras.html">Haus &amp; Extras</a></li>
+            <li><a href="umgebung.html">Umgebung</a></li>
+            <li><a href="preise.html">Preise</a></li>
+            <li><a href="anfrage.html">Anfrage</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__heading">Kontakt</h4>
+          <div class="footer__contact">
+            <p>Sappl bei Millstatt</p>
+            <p>9872 Millstatt am See, Kärnten</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Seeblick Sappl</p>
+        <div class="footer__legal">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+          <a href="agb.html">AGB</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
