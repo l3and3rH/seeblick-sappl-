@@ -336,14 +336,15 @@ ul, ol {
 }
 
 .header__logo {
-  font-family: var(--font-display);
-  font-size: 18px;
-  font-weight: 500;
-  color: var(--cream-100);
+  display: flex;
+  align-items: center;
   text-decoration: none;
 }
 
-.header__logo:hover { color: var(--gold-400); }
+.header__logo-img {
+  height: 40px;
+  width: auto;
+}
 
 .nav {
   display: flex;
@@ -1008,12 +1009,50 @@ ul, ol {
   color: var(--cream-100);
   font-size: 28px;
   cursor: pointer;
+  z-index: 2001;
 }
 
 .lightbox__content {
-  max-width: 90%;
+  max-width: 85%;
   max-height: 85vh;
   border-radius: var(--radius-sm);
+}
+
+.lightbox__prev,
+.lightbox__next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: var(--cream-100);
+  font-size: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox__prev:hover,
+.lightbox__next:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+.lightbox__prev { left: 16px; }
+.lightbox__next { right: 16px; }
+
+.lightbox__counter {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--cream-100);
+  font-size: 13px;
+  opacity: 0.8;
 }
 
 /* --- Activity Cards --- */
@@ -1358,9 +1397,52 @@ ul, ol {
   .footer__legal { justify-content: center; }
 }
 
+/* --- Scroll to Top --- */
+.scroll-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  background: var(--forest-600);
+  color: var(--cream-100);
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s, background 0.2s;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-top:hover {
+  background: var(--forest-500);
+}
+
+/* --- Form Errors --- */
+.input--error {
+  border-color: var(--error) !important;
+}
+
+.form-error {
+  display: block;
+  color: var(--error);
+  font-size: 12px;
+  margin-top: 4px;
+}
+
 /* --- Print --- */
 @media print {
-  .header, .footer, .mobile-nav, .cta-banner { display: none; }
+  .header, .footer, .mobile-nav, .cta-banner, .scroll-top { display: none; }
   body { background: white; }
   .hero { min-height: auto; padding: 24px 0; }
 }
