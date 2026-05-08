@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/png" href="seeblick-logo.png">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <meta property="og:image" content="https://seeblick-sappl.at/seeblick-logo.png">
 </head>
 <body>
@@ -102,8 +102,13 @@
         <div class="accent-line"></div>
       </div>
       <div class="map-container">
+        <div class="map-consent">
+          <p class="map-consent__text">Zum Anzeigen der Karte wird eine Verbindung zu OpenStreetMap hergestellt. Dabei kann Ihre IP-Adresse übermittelt werden.</p>
+          <button class="map-consent__btn" type="button">Karte laden</button>
+          <a href="datenschutz.html" class="map-consent__link">Datenschutzerklärung</a>
+        </div>
         <iframe
-          src="https://www.openstreetmap.org/export/embed.html?bbox=13.52%2C46.79%2C13.62%2C46.83&layer=mapnik&marker=46.812%2C13.572"
+          data-src="https://www.openstreetmap.org/export/embed.html?bbox=13.52%2C46.79%2C13.62%2C46.83&layer=mapnik&marker=46.812%2C13.572"
           loading="lazy"
           title="Karte: Seeblick Sappl in Sappl bei Millstatt"
           allowfullscreen>

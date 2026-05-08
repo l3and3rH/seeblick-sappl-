@@ -148,6 +148,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // --- Map Consent ---
+  document.querySelectorAll('.map-container').forEach(container => {
+    const consent = container.querySelector('.map-consent');
+    const iframe = container.querySelector('iframe[data-src]');
+    if (!consent || !iframe) return;
+
+    function loadMap() {
+      iframe.src = iframe.dataset.src;
+      consent.classList.add('hidden');
+    }
+
+    if (localStorage.getItem('mapConsent') === 'true') {
+      loadMap();
+    } else {
+      consent.querySelector('.map-consent__btn').addEventListener('click', () => {
+        localStorage.setItem('mapConsent', 'true');
+        loadMap();
+      });
+    }
+  });
+
   // --- Form: Pre-select apartment from URL ---
   const form = document.querySelector('#anfrageForm');
   if (form) {
