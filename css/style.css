@@ -1059,6 +1059,15 @@ ul, ol {
 .amenity-tags .tag {
   font-size: 12px;
   padding: 6px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.amenity-tags .tag svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
 }
 
 /* --- Apartment Links (Mini Cards) --- */
